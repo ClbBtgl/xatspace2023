@@ -1,0 +1,569 @@
+* {
+    box-sizing: border-box;
+    font-family: MS Gothic;
+}
+
+body {
+    color: #fff;
+    font-size: 12px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0px 10px;
+    background: #000;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a:link {
+    color: #fff;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+    animation-name: rgbText;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+a:visited,
+a:hover,
+a:active {
+    color: #fff;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+    animation-name: rgbText;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.linked-animation {
+    color: #fff;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+    animation-name: rgbText;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+ul {
+    list-style-type: square;
+}
+
+blockquote {
+    padding: 5px 10px;
+    border-left: 1px solid #fff;
+}
+
+.header {
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    border: 1px solid #fff;
+    border-top: none;
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.column {
+    padding: 15px 20px;
+}
+
+.column.side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.icon {
+    width: 183px;
+    height: 200px;
+    margin: auto;
+    border-radius: 100% 100% 0% 0%;
+    background-image: url(assets/jubis.gif);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.text {
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.column.middle {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+}
+
+.heading {
+    padding: 8px 15px;
+    border: 1px solid #fff;
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.heading::after {
+    content: "[_][o][x]";
+    float: right;
+}
+
+.inner {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-top: none;
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.progress {
+    margin-top: 8px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.tags {
+    margin-top: 8px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+}
+
+.sign {
+    margin-top: 8px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    height: 281px;
+    max-height: 300px;
+}
+
+.progress span {
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+
+/* VHS EFFECT: https://web.archive.org/web/20220124071638/https://lolcow.crd.co/#vhs */
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 400;
+    opacity: 0.8;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 450;
+}
+
+.noise:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("https://ice-creme.de/images/background-noise.png");
+    pointer-events: none;
+    will-change: background-position;
+    animation: noise 1s infinite alternate;
+}
+
+.lines {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 300;
+    opacity: 0.6;
+    will-change: opacity;
+    animation: opacity 3s linear infinite;
+}
+
+.lines:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient( to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 51%);
+    background-size: 100% 4px;
+    will-change: background, background-size;
+    animation: scanlines 0.2s linear infinite;
+}
+
+.main {}
+
+.main .noise:before {
+    background-size: 170%;
+}
+
+.main .vhs {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    will-change: text-shadow;
+    animation: rgbText 2s steps(9) 0s infinite alternate;
+}
+
+.main .vhs .char {
+    will-change: opacity;
+    animation: type 1.2s infinite alternate;
+    animation-delay: calc(60ms * var(--char-index));
+}
+
+.main .time {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    will-change: text-shadow;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+}
+
+.main .glitchtext {
+    will-change: text-shadow;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+}
+
+@keyframes noise {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    10% {
+        background-position: -5% -10%;
+    }
+    20% {
+        background-position: -15% 5%;
+    }
+    30% {
+        background-position: 7% -25%;
+    }
+    40% {
+        background-position: 20% 25%;
+    }
+    50% {
+        background-position: -25% 10%;
+    }
+    60% {
+        background-position: 15% 5%;
+    }
+    70% {
+        background-position: 0 15%;
+    }
+    80% {
+        background-position: 25% 35%;
+    }
+    90% {
+        background-position: -10% 10%;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0.6;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    35% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes scanlines {
+    from {
+        background: linear-gradient( to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 51%);
+        background-size: 100% 4px;
+    }
+    to {
+        background: linear-gradient( to bottom, rgba(0, 0, 0, 0.5) 50%, transparent 51%);
+        background-size: 100% 4px;
+    }
+}
+
+@keyframes rgbText {
+    0% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    25% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    45% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    50% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    55% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    90% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    100% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+}
+
+@keyframes type {
+    0%,
+    19% {
+        opacity: 0;
+    }
+    20%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.rgbtxt {
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+    animation-name: rgbText;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rgbText {
+    0% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    25% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    45% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    50% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    55% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+    90% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+    100% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+}
+
+#demo {
+    white-space: pre-wrap;
+    line-height: 25px;
+}
+
+#contain {
+    margin-top: 3rem;
+    white-space: pre-wrap;
+    line-height: 25px;
+}
+
+
+/* winamp */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+
+.player {
+    width: 100%;
+    height: 260px;
+    margin: 0;
+    background-color: black;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2), 0 33px 40px -40px rgba(0, 0, 0, 0.75);
+}
+
+.player .featureImg {
+    display: block;
+    width: 100%;
+    height: 60%;
+    background: no-repeat center center;
+    background-size: 100% auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.player .controller {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    border-radius: 0 0 15px 15px;
+}
+
+.player .controller .duration {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: rgba(204, 204, 204, 0.8);
+    transition: 0.25s all ease-in-out;
+}
+
+.player .controller .duration:hover {
+    cursor: pointer;
+    height: 15px;
+    top: -15px;
+}
+
+.player .controller .duration .currPos {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: #fff;
+}
+
+.player .controller .duration .currPos.animate {
+    transition: 0.25s top ease-in-out, 0.25s bottom ease-in-out, 1s width linear;
+}
+
+.player .controller .timeLogs {
+    width: 100%;
+    font-size: 10px;
+    padding: 5px 5px 0;
+}
+
+.player .controller .timeLogs:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.player .controller .timeLogs .currTime {
+    float: left;
+}
+
+.player .controller .timeLogs .totalDuration {
+    float: right;
+}
+
+.player .controller .controls {
+    padding: 10px 15px;
+}
+
+.player .controller .controls:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.player .controller .controls .playPauseBtn {
+    float: left;
+    height: 45px;
+    width: 45px;
+    margin-right: 8px;
+    background: url("https://i.imgur.com/FAyemkP.png");
+    transition: 0.5s opacity ease-in-out;
+}
+
+.player .controller .controls .playPauseBtn:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.player .controller .controls .playPauseBtn.play {
+    background-position: -3px -48px;
+}
+
+.player .controller .controls .playPauseBtn.pause {
+    background-position: -3px -2px;
+}
+
+.player .controller .controls .titleArtist {
+    float: left;
+    height: 62px;
+    width: 292px;
+    overflow: hidden;
+}
+
+.player .controller .controls .titleArtist .title {
+    font-size: 18px;
+    line-height: 14px;
+    height: 7px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.player .controller .controls .titleArtist .artist {
+    font-size: 12px;
+    height: 12px;
+    color: #c5c9d3;
+    white-space: nowrap;
+}
+
+.player .controller .controls .addtControls {
+    float: right;
+}
+
+.player .controller .controls .addtControls div {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("https://i.imgur.com/FAyemkP.png");
+}
+
+.player .controller .controls .addtControls div:hover {
+    cursor: pointer;
+}
+
+.player .controller .controls .addtControls .prev {
+    background-position: -61px -6px;
+    margin-left: 4px;
+}
+
+.player .controller .controls .addtControls .prev:hover {
+    background-position: -61px -34px;
+}
+
+.player .controller .controls .addtControls .next {
+    background-position: -91px -6px;
+    margin-left: 4px;
+}
+
+.player .controller .controls .addtControls .next:hover {
+    background-position: -91px -34px;
+}
+
+.player .controller .controls .addtControls .loop {
+    background-position: -119px -6px;
+}
+
+.player .controller .controls .addtControls .loop.active {
+    background-position: -119px -35px;
+}
