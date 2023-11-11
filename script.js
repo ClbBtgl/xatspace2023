@@ -328,8 +328,8 @@ window.addEventListener("load", () => {
         "assets/songs/fa.mp3?raw=true"
     );
     Playlist.addSong(
-        "Korn",
         "Trash",
+        "Korn",
         "assets/disc/issues.png",
         "assets/songs/trash.mp3?raw=true"
     );
