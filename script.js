@@ -1,12 +1,37 @@
 let i = 0;
 let s = 0;
 let e = 0
+let signatureCount = 0;
+let nameCount = 0;
+let aliasCount = 0;
+let nameText = ''
+let aliasText = ''
+let dataFriends = null
+let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA';
 let separator = "*************************************************************************\n"
-let contain = 'Thoughts:\nAlone, getting high on a Saturday night\nI am on the edge of a knife\nNobody cares if I am dead or alive\nOh, what a wonderful life...';
-let speed = 50;
+let contain = 'Nunca me quitarán lo que me diste tú. Yo jamás me rendiré. Voy a proteger a mis amigos de todo mal; la justicia salva si se aplica bien. Dispararé las balas de la verdad; seguiré siempre el bien, siempre reiré.\nLa vida tómala SIEMPRE POSITIVA';
+let speed = 60;
+let currentIndex
+
+
+const request = new XMLHttpRequest();
+request.overrideMimeType("application/json");
+request.open('GET', 'friends.json', true);
+request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+        const data = JSON.parse(request.responseText);
+        dataFriends = data
+    }
+};
+request.send(null);
+
+
 window.addEventListener("load", () => {
+    let galleryItems = document.querySelectorAll('.image');
+    const imageProfile = document.querySelector('.profile');
+
     typeWriter()
         /**
          *@function Playlist
@@ -38,7 +63,7 @@ window.addEventListener("load", () => {
 
     /**
      *@function Player
-     *Function for all of the music player functionality/controls
+     *FUNCION DE REPRO DE MUSICA
      */
     var Player = (function(w, d, $, pub) {
         var index = 0,
@@ -302,7 +327,7 @@ window.addEventListener("load", () => {
         return pub;
     })(window, document, jQuery, {});
 
-    // Add Songs to Playlist
+    // PUSHEAN CANCIONES
     Playlist.addSong(
         "DArkside",
         "Bring me the horizon",
@@ -333,11 +358,71 @@ window.addEventListener("load", () => {
         "assets/disc/issues.png",
         "assets/songs/trash.mp3?raw=true"
     );
+    Playlist.addSong(
+        "Trash",
+        "Korn",
+        "assets/disc/issues.png",
+        "assets/songs/trash.mp3?raw=true"
+    );
 
-    // Start Playlist
+    // INICIAR PLAYLIST
     Player.init();
 
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            resetHtml()
+            const demo = document.getElementById("demo")
+            const contain = document.getElementById("contain")
+            demo.classList.add("hidden");
+            contain.classList.add("hidden");
+            const fiends = document.getElementById("fiends")
+            const signature = document.getElementById("signature")
+
+            signatureCount = 0
+            nameCount = 0
+            aliasCount = 0
+            document.getElementById("name").textContent = ''
+            document.getElementById("alias").textContent = ''
+            document.getElementById("signature-text").textContent = ''
+            nameText = ''
+            aliasText = ''
+            signatureText = ''
+            const imgSrc = item.querySelector('img').src
+            imageProfile.src = imgSrc
+            nameText = dataFriends[index].nombre
+            aliasText = dataFriends[index].alias
+            signatureText = dataFriends[index].dedicatoria
+            if (currentIndex === index) {
+                fiends.classList.add("hidden");
+                signature.classList.add("hidden");
+                i = 0;
+                s = 0;
+                e = 0
+                demo.classList.remove("hidden");
+                contain.classList.remove("hidden");
+                currentIndex = null
+                typeWriter()
+            } else {
+                fiends.classList.remove("hidden");
+                signature.classList.remove("hidden");
+                typeWriterNameText()
+
+                currentIndex = index
+            }
+
+
+            // typeWriterSignature()
+        });
+    });
+
 });
+
+
+function resetHtml() {
+    document.getElementById("demo").textContent = ''
+    document.getElementById("contain").textContent = ''
+    document.getElementById("contain").textContent = ''
+}
 
 
 function typeWriter() {
@@ -352,6 +437,8 @@ function typeWriter() {
     }
 }
 
+
+// FUNCIONES DE AUTOESCRITURA, NO HICE FUNCIONES REUTILIZABLES POR QUE SOY FLOJA
 function typeWriterSeparator() {
     document.getElementById("contain").innerHTML += separator;
     typeWriterContain()
@@ -363,6 +450,41 @@ function typeWriterContain() {
         document.getElementById("contain").innerHTML += contain.charAt(e);
         e++;
         setTimeout(typeWriterContain, speed);
+
+    }
+}
+
+
+function typeWriterSignature() {
+    if (signatureCount < signatureText.length) {
+        document.getElementById("signature-text").innerHTML += signatureText.charAt(signatureCount);
+        signatureCount++;
+
+        setTimeout(typeWriterSignature, speed);
+
+    }
+}
+
+function typeWriterNameText() {
+    if (nameCount < nameText.length) {
+        document.getElementById("name").innerHTML += nameText.charAt(nameCount);
+        nameCount++;
+        if (nameCount === nameText.length) {
+            typeWriterAliasText()
+        }
+        setTimeout(typeWriterNameText, speed);
+
+    }
+}
+
+function typeWriterAliasText() {
+    if (aliasCount < aliasText.length) {
+        document.getElementById("alias").innerHTML += aliasText.charAt(aliasCount);
+        aliasCount++;
+        if (aliasCount === aliasText.length) {
+            typeWriterSignature()
+        }
+        setTimeout(typeWriterAliasText, speed);
 
     }
 }

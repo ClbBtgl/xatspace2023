@@ -12,9 +12,44 @@ body {
     background: #000;
 }
 
-img {
+
+/* img {
     width: 100%;
     height: auto;
+} */
+
+.friends-container {
+    height: 227px;
+    overflow: auto;
+}
+
+.friends-image {
+    display: flex;
+    justify-content: space-around;
+}
+
+.friends-image,
+img {
+    padding-bottom: 3px;
+    padding-left: 4px;
+}
+
+.friends-container::-webkit-scrollbar {
+    width: .5vw;
+    background: black;
+}
+
+.friends-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(330deg, black 26%, white 43.1%, white 50%, white 56.9%, black 57%);
+    border-radius: 10px;
+    /* Radio de borde del thumb */
+    /* background-color: #888; */
+    /* Color del thumb */
+}
+
+.friends-image,
+img {
+    cursor: pointer;
 }
 
 a:link {
@@ -566,4 +601,52 @@ blockquote {
 
 .player .controller .controls .addtControls .loop.active {
     background-position: -119px -35px;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.fiends {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 1.5rem;
+}
+
+.signature {
+    /* text-align: justify; */
+    overflow-y: auto;
+    height: 166px;
+    padding-right: 7px;
+}
+
+.friends,
+.data {
+    padding-left: 1rem;
+}
+
+.signature::-webkit-scrollbar {
+    width: .5vw;
+    background: black;
+}
+
+.signature::-webkit-scrollbar-thumb {
+    background: linear-gradient(330deg, black 26%, white 43.1%, white 50%, white 56.9%, black 57%);
+    border-radius: 10px;
+    /* Radio de borde del thumb */
+    /* background-color: #888; */
+    /* Color del thumb */
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }
