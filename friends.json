@@ -28,6 +28,12 @@
         "dedicatoria": "Mi hermosa lala, sabes que ultimamente nos hemos acercado mucho y no sabes lo feliz que eso me hace sentir. sos una persona agradable, divertida, con unas ocurrencias que nunca se me cruzarian por la mente, y eso es lo que te hace única. Sé que con el tiempo te vas a volver muy valiosa para mí, por que te voy tomando un cariño fuerte día con día, jamás cambies esa locura que te identifica. Te quiero mucho..."
     },
     {
+        "nombre": "Goma",
+        "alias": "Wings",
+        "avatar": "assets/images/avatars/evangelist.gif",
+        "dedicatoria": "Hola mi niña linda,no pensé que me concederías dejarte una huellita por aquí. ¿Por dónde empiezo? Sabes mi primera impresión de ti fue que eras una chica algo rara y bastante alocada. Con el pasar del tiempo confirme un poco mi hipótesis, pero ¿Sabes?. Amo eso de ti, adoro cada una de tus locuras. No tienes ideas como me hacen reír tus burradas, siempre sales con cada cosa. Sin embargo, igual eres de esas personas con las que puedo confiar plenamente.Me acogiste en tu xat y me hiciste sentir en casa, junto con los demás.No me juzgas por nada del mundo, tratas de entenderme y aconsejarme.Me cuidas como pocos suelen hacerlo, y eso me conmueve mucho.A veces creo no merecer tu amistad, pues desearía poder hacer más por ti.Te amo Lala, y no es chiste.Te amo y no pido nada a cambio.Solo poder hacerte feliz y querer ver que sonrías, trato de poder ser en quien puedas apoyarte en momentos difíciles, así como tú lo haces conmigo.Todo lo malo que digan de ti, me lo paso por el asterisco y solo ansío poder darte lo que tú me das, una amistad dulce y desinteresada.Espero nuestro vínculo nunca se quiebre, aunque lo dudo.Sé que, aunque a veces no nos escribamos muy seguido, solemos pensar en la otra o al menos, eso yo creo. ( ? ) Bueno para no alargar más esto, quiero que sepas que me tendrás a mí para lo que necesites.Tanto en momentos de seriedad, como los que no lo son.Gracias por todo, Cele tonta.Sigamos riendo y compartiendo hasta no poder más.❤Atte.Goma"
+    },
+    {
         "nombre": "DAZAI",
         "alias": "The emo",
         "avatar": "assets/images/avatars/dazai.gif",
@@ -56,6 +62,12 @@
         "alias": "Zzz piecezzz",
         "avatar": "assets/images/avatars/gear.gif",
         "dedicatoria": "Juviaaa, me gusta ver que seguís presente a pesar de los años, fuíste de las primeras en recibirme otra vez en mi regreso y espero que sigas estando presente por muchos años más.Te quiero."
+    },
+    {
+        "nombre": "Monz",
+        "alias": "Monserrat bustamante opción 5",
+        "avatar": "assets/images/avatars/evangelist.gif",
+        "dedicatoria": "GRACIAS DIOSITO PORQUE EL DESTINO ME HIZO CONOCER A ESTA ESKISOAMIKA QUE DURANTE LOS AÑOS CON SUS OCURRENCIAS MARCÓ UNA GRAN DIFERENCIA PARA BIEN TQM LALA CAREPATOLUCA"
     },
     {
         "nombre": "Luis",
@@ -87,18 +99,8 @@
         "avatar": "assets/images/avatars/evangelist.gif",
         "dedicatoria": "Lalaza, aunque casi no charlemos como antes quiero decirte que sos una de las personas que más aprecio y que me alegro de haber conocido. Gracias por aceptarme y ser parte de tu familia. TQM;"
     },
-    {
-        "nombre": "Goma",
-        "alias": "Wings",
-        "avatar": "assets/images/avatars/evangelist.gif",
-        "dedicatoria": "Hola mi niña linda,no pensé que me concederías dejarte una huellita por aquí. ¿Por dónde empiezo? Sabes mi primera impresión de ti fue que eras una chica algo rara y bastante alocada. Con el pasar del tiempo confirme un poco mi hipótesis, pero ¿Sabes?. Amo eso de ti, adoro cada una de tus locuras. No tienes ideas como me hacen reír tus burradas, siempre sales con cada cosa. Sin embargo, igual eres de esas personas con las que puedo confiar plenamente.Me acogiste en tu xat y me hiciste sentir en casa, junto con los demás.No me juzgas por nada del mundo, tratas de entenderme y aconsejarme.Me cuidas como pocos suelen hacerlo, y eso me conmueve mucho.A veces creo no merecer tu amistad, pues desearía poder hacer más por ti.Te amo Lala, y no es chiste.Te amo y no pido nada a cambio.Solo poder hacerte feliz y querer ver que sonrías, trato de poder ser en quien puedas apoyarte en momentos difíciles, así como tú lo haces conmigo.Todo lo malo que digan de ti, me lo paso por el asterisco y solo ansío poder darte lo que tú me das, una amistad dulce y desinteresada.Espero nuestro vínculo nunca se quiebre, aunque lo dudo.Sé que, aunque a veces no nos escribamos muy seguido, solemos pensar en la otra o al menos, eso yo creo. ( ? ) Bueno para no alargar más esto, quiero que sepas que me tendrás a mí para lo que necesites.Tanto en momentos de seriedad, como los que no lo son.Gracias por todo, Cele tonta.Sigamos riendo y compartiendo hasta no poder más.❤Atte.Goma"
-    },
-    {
-        "nombre": "Monz",
-        "alias": "Monserrat bustamante opción 5",
-        "avatar": "assets/images/avatars/evangelist.gif",
-        "dedicatoria": "GRACIAS DIOSITO PORQUE EL DESTINO ME HIZO CONOCER A ESTA ESKISOAMIKA QUE DURANTE LOS AÑOS CON SUS OCURRENCIAS MARCÓ UNA GRAN DIFERENCIA PARA BIEN TQM LALA CAREPATOLUCA"
-    },
+
+
     {
         "nombre": "Sivi",
         "alias": "Beauty",
