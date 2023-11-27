@@ -1,6 +1,7 @@
 let i = 0;
 let s = 0;
-let e = 0
+let e = 0;
+let separatorCount = 74;
 let signatureCount = 0;
 let nameCount = 0;
 let aliasCount = 0;
@@ -9,9 +10,8 @@ let aliasText = ''
 let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
-let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA';
-let separator = "*************************************************************************\n"
-let contain = 'Nunca me quitarán lo que me diste tú. Yo jamás me rendiré. Voy a proteger a mis amigos de todo mal; la justicia salva si se aplica bien. Dispararé las balas de la verdad; seguiré siempre el bien, siempre reiré.\nLa vida tómala SIEMPRE POSITIVA';
+let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n*************************************************************************';
+let contain = 'Ahora que intentamos mostrar otra vez. Los sentimientos que hemos de compartir, sabremos un día qué era lo más importante en la vida. Tristeza por mis ojos va a caer. Transformaré en un canto lo que lloraré Y comenzará a temblar un remolino gigante. Que todo esfumará Y desvanecerá';
 let speed = 60;
 let currentIndex
 
@@ -421,16 +421,16 @@ window.addEventListener("load", () => {
 function resetHtml() {
     document.getElementById("demo").textContent = ''
     document.getElementById("contain").textContent = ''
-    document.getElementById("contain").textContent = ''
 }
 
 
 function typeWriter() {
+
     if (i < title.length) {
         document.getElementById("demo").innerHTML += title.charAt(i);
         i++;
         if (i === title.length) {
-            typeWriterSeparator()
+            typeWriterContain()
         }
         setTimeout(typeWriter, speed);
 
@@ -439,14 +439,16 @@ function typeWriter() {
 
 
 // FUNCIONES DE AUTOESCRITURA, NO HICE FUNCIONES REUTILIZABLES POR QUE SOY FLOJA
-function typeWriterSeparator() {
-    document.getElementById("contain").innerHTML += separator;
-    typeWriterContain()
-}
+// function typeWriterSeparator() {
+//     document.getElementById("contain").innerHTML += separator;
+//     if (separatorCount === separator.length) {
+
+//     }
+// }
 
 
 function typeWriterContain() {
-    if (e < contain.length) {
+    if (e < contain.length && i === title.length) {
         document.getElementById("contain").innerHTML += contain.charAt(e);
         e++;
         setTimeout(typeWriterContain, speed);
