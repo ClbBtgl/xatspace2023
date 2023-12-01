@@ -11,7 +11,7 @@ let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n*************************************************************************';
-let contain = 'Ahora que intentamos mostrar otra vez. Los sentimientos que hemos de compartir, sabremos un día qué era lo más importante en la vida. Tristeza por mis ojos va a caer. Transformaré en un canto lo que lloraré Y comenzará a temblar un remolino gigante. Que todo esfumará Y desvanecerá';
+let contain = 'Yea....';
 let speed = 60;
 let currentIndex
 
