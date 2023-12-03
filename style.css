@@ -650,3 +650,29 @@ blockquote {
 .show {
     display: block;
 }
+
+.special {
+    /* text-align: justify; */
+    overflow-y: auto;
+    height: 166px;
+    padding-right: 7px;
+}
+
+.special::-webkit-scrollbar {
+    width: .5vw;
+    background: black;
+}
+
+.special::-webkit-scrollbar-thumb {
+    background: linear-gradient(330deg, black 26%, white 43.1%, white 50%, white 56.9%, black 57%);
+    border-radius: 10px;
+    /* Radio de borde del thumb */
+    /* background-color: #888; */
+    /* Color del thumb */
+}
+
+.special iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}

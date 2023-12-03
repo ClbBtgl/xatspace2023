@@ -377,6 +377,7 @@ window.addEventListener("load", () => {
             contain.classList.add("hidden");
             const fiends = document.getElementById("fiends")
             const signature = document.getElementById("signature")
+            const special = document.getElementById("special")
 
             signatureCount = 0
             nameCount = 0
@@ -393,8 +394,14 @@ window.addEventListener("load", () => {
             aliasText = dataFriends[index].alias
             signatureText = dataFriends[index].dedicatoria
             if (currentIndex === index) {
-                fiends.classList.add("hidden");
-                signature.classList.add("hidden");
+                if (index === 15) {
+                    fiends.classList.add("hidden");
+                    special.classList.add("hidden");
+                } else {
+                    fiends.classList.add("hidden");
+                    signature.classList.add("hidden");
+                }
+
                 i = 0;
                 s = 0;
                 e = 0
@@ -403,10 +410,14 @@ window.addEventListener("load", () => {
                 currentIndex = null
                 typeWriter()
             } else {
-                fiends.classList.remove("hidden");
-                signature.classList.remove("hidden");
-                typeWriterNameText()
-
+                if (index === 15) {
+                    fiends.classList.remove("hidden");
+                    special.classList.remove("hidden");
+                } else {
+                    fiends.classList.remove("hidden");
+                    signature.classList.remove("hidden");
+                    typeWriterNameText()
+                }
                 currentIndex = index
             }
 
