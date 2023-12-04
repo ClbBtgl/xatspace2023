@@ -406,14 +406,12 @@ window.addEventListener("load", () => {
             aliasText = dataFriends[index].alias
             signatureText = dataFriends[index].dedicatoria
             if (currentIndex === index) {
-                if (index === 15) {
-                    fiends.classList.add("hidden");
-                    special.classList.add("hidden");
-                } else {
-                    fiends.classList.add("hidden");
-                    signature.classList.add("hidden");
-                }
-
+                // if (index === 15) {
+                //     fiends.classList.add("hidden");
+                //     special.classList.add("hidden");
+                // } 
+                fiends.classList.add("hidden");
+                signature.classList.add("hidden");
                 i = 0;
                 s = 0;
                 e = 0
@@ -422,14 +420,13 @@ window.addEventListener("load", () => {
                 currentIndex = null
                 typeWriter()
             } else {
-                if (index === 15) {
-                    fiends.classList.remove("hidden");
-                    special.classList.remove("hidden");
-                } else {
-                    fiends.classList.remove("hidden");
-                    signature.classList.remove("hidden");
-                    typeWriterNameText()
-                }
+                // if (index === 15) {
+                //     fiends.classList.remove("hidden");
+                //     special.classList.remove("hidden");
+                // } else {
+                fiends.classList.remove("hidden");
+                signature.classList.remove("hidden");
+                typeWriterNameText()
                 currentIndex = index
             }
 
