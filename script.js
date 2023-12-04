@@ -329,6 +329,18 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "This fire burns",
+        "Killswitch Engage",
+        "assets/disc/ke.jpg",
+        "assets/songs/thisfire.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "Days of the phoenix",
+        "A Fire Inside",
+        "assets/disc/aod.png",
+        "assets/songs/daysofthephoenix.mp3?raw=true"
+    );
+    Playlist.addSong(
         "DArkside",
         "Bring me the horizon",
         "assets/disc/darkside.png",

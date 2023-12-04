@@ -523,7 +523,7 @@ blockquote {
     height: 45px;
     width: 45px;
     margin-right: 8px;
-    background: url("https://i.imgur.com/FAyemkP.png");
+    background: url("assets/disc/FAyemkP.png");
     transition: 0.5s opacity ease-in-out;
 }
 
@@ -570,7 +570,7 @@ blockquote {
     float: right;
     width: 17px;
     height: 17px;
-    background: url("https://i.imgur.com/FAyemkP.png");
+    background: url("assets/disc/FAyemkP.png");
 }
 
 .player .controller .controls .addtControls div:hover {
