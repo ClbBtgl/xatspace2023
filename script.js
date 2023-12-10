@@ -11,7 +11,7 @@ let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n*************************************************************************';
-let contain = 'Yea....';
+let contain = "No, this ain't heavy metal!\n NO, THIS AIN'T HEAVY METAL!!!!!!";
 let speed = 60;
 let currentIndex
 
@@ -328,6 +328,12 @@ window.addEventListener("load", () => {
     })(window, document, jQuery, {});
 
     // PUSHEAN CANCIONES
+    Playlist.addSong(
+        "Heavy Metal",
+        "Bring me the horizon",
+        "assets/disc/amo.png",
+        "assets/songs/HeavyMetal.mp3?raw=true"
+    );
     Playlist.addSong(
         "This fire burns",
         "Killswitch Engage",
