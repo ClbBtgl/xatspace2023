@@ -33,7 +33,17 @@
     </head>
 
     <body>
+
         <script src="script.js"></script>
+        <div class="options-switch">
+            <label class="toggle-switchy" for="example_square_5" data-size="xs" data-style="square">
+                <input checked type="checkbox" id="example_square_5">
+                <span class="toggle">
+                    <span class="switch"></span>
+                </span>
+            </label>
+        </div>
+
         <!-- efectos vhs -->
         <div class="lines"></div>
         <div class="main">
@@ -48,10 +58,10 @@
             <div class="asda">
                 <div class="row">
                     <div class="column side">
-                        <div class="icon"></div>
+                        <div class="icon-dark" id="icon"></div>
 
                         <!-- descripcion  -->
-                        <div class="text">✧ About Me ✧<br> Don't give a fuck if my heart stops beating
+                        <div class="text">✧ About Me ✧<br> <span id="aboutMe"></span>
                         </div>
 
                         <div class="text">
@@ -192,7 +202,7 @@
                                 <p class="totalDuration"></p>
                             </div>
                             <div class="controls">
-                                <div class="playPauseBtn play"></div>
+                                <div class="playPauseBtn play" id="reproPlay"></div>
                                 <div class="titleArtist">
                                     <p class="title linked-animation"></p>
                                     <p class="artist linked-animation"></p>

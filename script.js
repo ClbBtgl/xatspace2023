@@ -11,9 +11,15 @@ let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n*************************************************************************';
-let contain = "No, this ain't heavy metal!\n NO, THIS AIN'T HEAVY METAL!!!!!!";
+let contain = "No, this ain't heavy metal!\nNO, THIS AIN'T HEAVY METAL!!!!!!";
+let emoLetters = "Don't give a fuck if my heart stops beating"
+let happyLetters = "My cock is much bigger than yours\nMy cock can walk right through the door"
 let speed = 60;
 let currentIndex
+let reproducido = false
+let boton = null
+let Playlist
+let Player
 
 
 const request = new XMLHttpRequest();
@@ -29,15 +35,19 @@ request.send(null);
 
 
 window.addEventListener("load", () => {
+    const span = document.getElementById('aboutMe');
+    span.textContent = emoLetters;
+    boton = document.getElementById("button-ad")
     let galleryItems = document.querySelectorAll('.image');
     const imageProfile = document.querySelector('.profile');
+    const checkbox = document.getElementById('example_square_5');
 
     typeWriter()
         /**
          *@function Playlist
          *Function for all of the playlist manipulation & functionalities
          */
-    var Playlist = (function(w, d, $, pub) {
+    Playlist = (function(w, d, $, pub) {
         var list = [];
 
         pub.addSong = function(title, artist, image, source) {
@@ -65,7 +75,7 @@ window.addEventListener("load", () => {
      *@function Player
      *FUNCION DE REPRO DE MUSICA
      */
-    var Player = (function(w, d, $, pub) {
+    Player = (function(w, d, $, pub) {
         var index = 0,
             audio = [],
             ticker = "",
@@ -441,8 +451,41 @@ window.addEventListener("load", () => {
         });
     });
 
+
+
+    // Función para manejar el cambio en el checkbox
+    function cambioCheckbox() {
+
+        if (!reproducido) {
+            Player.playSong();
+        }
+        const body = document.body;
+        body.classList.toggle("modo-oscuro");
+        const icon = document.getElementById("icon");
+        // Cambiar variables CSS según el modo
+        // const isDarkMode = body.classList.contains("modo-oscuro");
+        reproducido = true
+        if (!checkbox.checked) {
+            document.documentElement.style.setProperty('--color-fondo-claro', '#52295');
+            span.textContent = happyLetters;
+            icon.classList.remove("icon-dark");
+            icon.classList.add("icon-claro");
+        } else {
+            document.documentElement.style.setProperty(' --color-fondo-oscuro', '#000');
+
+            span.textContent = emoLetters;
+            icon.classList.remove("icon-claro");
+            icon.classList.add("icon-dark");
+        }
+    }
+
+    // Agregar un event listener para capturar el cambio en el checkbox
+    checkbox.addEventListener('change', cambioCheckbox);
 });
 
+function toggleDarkMode() {
+
+}
 
 function resetHtml() {
     document.getElementById("demo").textContent = ''
