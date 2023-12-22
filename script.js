@@ -339,6 +339,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "DArkside",
+        "Bring me the horizon",
+        "assets/disc/darkside.png",
+        "assets/songs/darskide.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Heavy Metal",
         "Bring me the horizon",
         "assets/disc/amo.png",
@@ -355,12 +361,6 @@ window.addEventListener("load", () => {
         "A Fire Inside",
         "assets/disc/aod.png",
         "assets/songs/daysofthephoenix.mp3?raw=true"
-    );
-    Playlist.addSong(
-        "DArkside",
-        "Bring me the horizon",
-        "assets/disc/darkside.png",
-        "assets/songs/darskide.mp3?raw=true"
     );
     Playlist.addSong(
         "There's no going back",
