@@ -20,6 +20,7 @@ let reproducido = false
 let boton = null
 let Playlist
 let Player
+let state = false;
 
 
 const request = new XMLHttpRequest();
@@ -41,7 +42,6 @@ window.addEventListener("load", () => {
     let galleryItems = document.querySelectorAll('.image');
     const imageProfile = document.querySelector('.profile');
     const checkbox = document.getElementById('example_square_5');
-
     typeWriter()
         /**
          *@function Playlist
@@ -481,6 +481,20 @@ window.addEventListener("load", () => {
 
     // Agregar un event listener para capturar el cambio en el checkbox
     checkbox.addEventListener('change', cambioCheckbox);
+    document.getElementById('coinMaster').addEventListener('click', function() {
+        const eigthbits = document.getElementById("8-bits-space");
+        const normalSpace = document.getElementById("content-black-space");
+        state = !state
+        if (state) {
+            normalSpace.classList.remove("show");
+            normalSpace.classList.add("hidden");
+            eigthbits.classList.add("show");
+        } else {
+            eigthbits.classList.remove("show");
+            normalSpace.classList.add("show");
+            eigthbits.classList.add("hidden");
+        }
+    });
 });
 
 function toggleDarkMode() {
