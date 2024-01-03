@@ -17,6 +17,7 @@ let happyLetters = "My cock is much bigger than yours\nMy cock can walk right th
 let speed = 60;
 let currentIndex
 let reproducido = false
+let reproducido2 = false
 let boton = null
 let Playlist
 let Player
@@ -484,6 +485,10 @@ window.addEventListener("load", () => {
     document.getElementById('coinMaster').addEventListener('click', function() {
         const eigthbits = document.getElementById("8-bits-space");
         const normalSpace = document.getElementById("content-black-space");
+        if (!reproducido2) {
+            Player.playSong();
+        }
+        reproducido2 = true
         state = !state
         if (state) {
             normalSpace.classList.remove("show");

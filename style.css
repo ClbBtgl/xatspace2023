@@ -12,6 +12,7 @@
 
 * {
     box-sizing: border-box;
+    cursor: default !important;
     /* font-family: MS Gothic; */
 }
 
@@ -67,7 +68,7 @@ img {
 
 .friends-image,
 img {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 a:link {
@@ -498,7 +499,7 @@ blockquote {
 }
 
 .player .controller .duration:hover {
-    cursor: pointer;
+    cursor: pointer !important;
     height: 15px;
     top: -15px;
 }
@@ -556,7 +557,7 @@ blockquote {
 }
 
 .player .controller .controls .playPauseBtn:hover {
-    cursor: pointer;
+    cursor: pointer !important;
     opacity: 0.75;
 }
 
@@ -602,7 +603,7 @@ blockquote {
 }
 
 .player .controller .controls .addtControls div:hover {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .player .controller .controls .addtControls .prev {
@@ -713,7 +714,7 @@ blockquote {
 
 .icon {
     font-size: 24px;
-    cursor: pointer;
+    cursor: pointer !important;
     margin-right: 10px;
 }
 
@@ -808,7 +809,7 @@ CORE STYLES BELOW - NO TOUCHY
 }
 
 .toggle-switchy:hover {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .toggle-switchy>input {
@@ -839,7 +840,7 @@ CORE STYLES BELOW - NO TOUCHY
     width: 100%;
     height: 100%;
     margin: 0;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .toggle-switchy>input+.toggle>.switch {
@@ -1216,7 +1217,6 @@ CORE STYLES ABOVE - NO TOUCHY
     margin: 0;
     height: 12px;
     transition: all ease-in 0.25s;
-    cursor: url(./assets/cursor.png), auto;
 }
 
 #app .container .character-container .char-length-wrapper .range-slider::-webkit-slider-thumb {
@@ -1348,4 +1348,5 @@ CORE STYLES ABOVE - NO TOUCHY
     position: fixed;
     top: 77px;
     left: 0;
+    cursor: pointer !important;
 }
