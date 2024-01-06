@@ -10,7 +10,7 @@ let aliasText = ''
 let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
-let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n*************************************************************************';
+let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
 let contain = "No, this ain't heavy metal!\nNO, THIS AIN'T HEAVY METAL!!!!!!";
 let emoLetters = "Don't give a fuck if my heart stops beating"
 let happyLetters = "My cock is much bigger than yours\nMy cock can walk right through the door"
@@ -339,6 +339,12 @@ window.addEventListener("load", () => {
     })(window, document, jQuery, {});
 
     // PUSHEAN CANCIONES
+    Playlist.addSong(
+        "Kool-Aid",
+        "Bring me the horizon",
+        "assets/disc/koolaid.png",
+        "assets/songs/koolaid.mp3?raw=true"
+    );
     Playlist.addSong(
         "DArkside",
         "Bring me the horizon",
