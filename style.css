@@ -576,6 +576,10 @@ blockquote {
     overflow: hidden;
 }
 
+.cursor___pointer {
+    cursor: pointer !important;
+}
+
 .player .controller .controls .titleArtist .title {
     font-size: 18px;
     line-height: 20px;
