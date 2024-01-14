@@ -13,7 +13,7 @@ let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
 let contain = "No, this ain't heavy metal!\nNO, THIS AIN'T HEAVY METAL!!!!!!";
 let emoLetters = "Don't give a fuck if my heart stops beating"
-let happyLetters = "My cock is much bigger than yours\nMy cock can walk right through the door"
+let happyLetters = "D-Generation\nWho's keep the score?"
 let speed = 60;
 let currentIndex
 let reproducido = false
