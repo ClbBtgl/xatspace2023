@@ -340,6 +340,18 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Bad Habits",
+        "Ed Sheeran",
+        "assets/disc/badhabits.png",
+        "assets/songs/badhabits.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "In the dark",
+        "Bring me the horizon",
+        "assets/disc/amo.png",
+        "assets/songs/inthedark.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Kool-Aid",
         "Bring me the horizon",
         "assets/disc/koolaid.png",
@@ -393,12 +405,7 @@ window.addEventListener("load", () => {
         "assets/disc/issues.png",
         "assets/songs/trash.mp3?raw=true"
     );
-    Playlist.addSong(
-        "Trash",
-        "Korn",
-        "assets/disc/issues.png",
-        "assets/songs/trash.mp3?raw=true"
-    );
+
 
     // INICIAR PLAYLIST
     Player.init();
