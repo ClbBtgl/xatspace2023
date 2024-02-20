@@ -134,7 +134,6 @@ window.addEventListener("load", () => {
             var song = Playlist.getSong(index);
 
             if (!audio[index]) {
-                console.log("add");
                 audio[index] = new Audio();
                 audio[index].src = song.source;
                 audio[index].addEventListener("loadedmetadata", function() {
