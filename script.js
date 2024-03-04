@@ -339,6 +339,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Kool-Aid",
+        "Bring me the horizon",
+        "assets/disc/koolaid.png",
+        "assets/songs/koolaid.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Bad Habits",
         "Ed Sheeran",
         "assets/disc/badhabits.png",
@@ -349,12 +355,6 @@ window.addEventListener("load", () => {
         "Bring me the horizon",
         "assets/disc/amo.png",
         "assets/songs/inthedark.mp3?raw=true"
-    );
-    Playlist.addSong(
-        "Kool-Aid",
-        "Bring me the horizon",
-        "assets/disc/koolaid.png",
-        "assets/songs/koolaid.mp3?raw=true"
     );
     Playlist.addSong(
         "DArkside",
