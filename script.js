@@ -339,6 +339,30 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Run",
+        "Bring me the horizon",
+        "assets/disc/spirit.png",
+        "assets/songs/run.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "Never find me",
+        "Korn",
+        "assets/disc/neverfindme.png",
+        "assets/songs/neverfindme.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "Forgotten",
+        "Korn",
+        "assets/disc/rekiem.png",
+        "assets/songs/forgotten.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "Crucified",
+        "Ghost",
+        "assets/disc/ghost.png",
+        "assets/songs/crucified.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Kool-Aid",
         "Bring me the horizon",
         "assets/disc/koolaid.png",
