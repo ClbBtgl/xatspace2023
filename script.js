@@ -342,7 +342,7 @@ window.addEventListener("load", () => {
         "Run",
         "Bring me the horizon",
         "assets/disc/spirit.png",
-        "assets/songs/run.mp3?raw=true"
+        "assets/songs/Run.mp3?raw=true"
     );
     Playlist.addSong(
         "Never find me",
