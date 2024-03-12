@@ -206,7 +206,7 @@ window.addEventListener("load", () => {
                 posMin = Math.floor(songPos / 60),
                 posSec = songPos % 60 < 10 ? "0" + (songPos % 60) : songPos % 60;
 
-            Player.pauseSong();
+            // Player.pauseSong();
 
             $currPos.removeClass("animate");
             $currPos.css("width", percentageWidth + "%");
