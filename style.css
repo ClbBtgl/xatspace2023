@@ -1354,3 +1354,48 @@ CORE STYLES ABOVE - NO TOUCHY
     left: 0;
     cursor: pointer !important;
 }
+
+.container-fixed {
+    position: fixed;
+    top: 223px;
+    background-color: black;
+    left: 15%;
+    width: 17%;
+}
+
+.container-fixed .inner {
+    height: 200px !important;
+    background-image: url(assets/200w.gif) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-fixed-mackenzie {
+    position: fixed;
+    top: 139px;
+    background-color: black;
+    width: 17%;
+    left: 78%;
+}
+
+.container-fixed-mackenzie .inner {
+    height: 200px !important;
+    background-image: url(assets/housen.gif) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-fixed-org {
+    position: fixed;
+    top: 115px;
+    background-color: black;
+    width: 17%;
+    left: 62%;
+}
+
+.container-fixed-org .inner {
+    height: 200px !important;
+    background-image: url(assets/heart.gif) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

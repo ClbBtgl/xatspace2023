@@ -37,6 +37,15 @@ request.send(null);
 
 
 window.addEventListener("load", () => {
+    showPopup()
+    setTimeout(() => {
+        showPopupMackenzie()
+    }, 500);
+    setTimeout(() => {
+        showPopupOrgtx('popupOrgtx', 6000)
+    }, 1000);
+
+
     const span = document.getElementById('aboutMe');
     span.textContent = emoLetters;
     boton = document.getElementById("button-ad")
@@ -339,6 +348,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "DArkside",
+        "Bring me the horizon",
+        "assets/disc/darkside.png",
+        "assets/songs/darskide.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Run",
         "Bring me the horizon",
         "assets/disc/spirit.png",
@@ -379,12 +394,6 @@ window.addEventListener("load", () => {
         "Bring me the horizon",
         "assets/disc/amo.png",
         "assets/songs/inthedark.mp3?raw=true"
-    );
-    Playlist.addSong(
-        "DArkside",
-        "Bring me the horizon",
-        "assets/disc/darkside.png",
-        "assets/songs/darskide.mp3?raw=true"
     );
     Playlist.addSong(
         "Heavy Metal",
@@ -613,4 +622,38 @@ function typeWriterAliasText() {
         setTimeout(typeWriterAliasText, speed);
 
     }
+}
+
+
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+
+    setTimeout(function() {
+        document.getElementById('popup').style.display = 'none';
+    }, 10000);
+
+    setInterval(showPopup, 50000);
+}
+
+
+function showPopupMackenzie() {
+    document.getElementById('popupMackenzie').style.display = 'block';
+
+    setTimeout(function() {
+        document.getElementById('popupMackenzie').style.display = 'none';
+    }, 10500);
+
+    setInterval(showPopupMackenzie, 60000);
+}
+
+
+
+function showPopupOrgtx() {
+    document.getElementById('popupOrgtx').style.display = 'block';
+
+    setTimeout(function() {
+        document.getElementById('popupOrgtx').style.display = 'none';
+    }, 10900);
+
+    setInterval(showPopupOrgtx, 70000);
 }
