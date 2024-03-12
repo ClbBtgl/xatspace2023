@@ -1357,10 +1357,10 @@ CORE STYLES ABOVE - NO TOUCHY
 
 .container-fixed {
     position: fixed;
-    top: 223px;
+    top: 174px;
     background-color: black;
-    left: 15%;
-    width: 17%;
+    left: 6%;
+    width: 18%;
 }
 
 .container-fixed .inner {
