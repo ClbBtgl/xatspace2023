@@ -40,10 +40,10 @@ window.addEventListener("load", () => {
     showPopup()
     setTimeout(() => {
         showPopupMackenzie()
-    }, 500);
+    }, 3000);
     setTimeout(() => {
         showPopupOrgtx('popupOrgtx', 6000)
-    }, 1000);
+    }, 4000);
 
 
     const span = document.getElementById('aboutMe');
