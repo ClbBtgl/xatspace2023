@@ -348,6 +348,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Overthrone",
+        "Hacktivist",
+        "assets/disc/overthrone.png",
+        "assets/songs/overthrone.mp3?raw=true"
+    );
+    Playlist.addSong(
         "DArkside",
         "Bring me the horizon",
         "assets/disc/darkside.png",
