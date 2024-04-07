@@ -11,8 +11,8 @@ let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
-let contain = "No, this ain't heavy metal!\nNO, THIS AIN'T HEAVY METAL!!!!!!";
-let emoLetters = "Don't give a fuck if my heart stops beating"
+let contain = "Kill me, kill me, that's what you've got to face.\nmy friend this ain't the end";
+let emoLetters = "EN ESTE SPACE APOYAMOS A LA QUESADILLA AMERICANA"
 let happyLetters = "D-Generation\nWho's keep the score?"
 let speed = 60;
 let currentIndex
@@ -38,12 +38,12 @@ request.send(null);
 
 window.addEventListener("load", () => {
     showPopup()
-    setTimeout(() => {
-        showPopupMackenzie()
-    }, 3000);
-    setTimeout(() => {
-        showPopupOrgtx('popupOrgtx', 6000)
-    }, 4000);
+        // setTimeout(() => {
+        //     showPopupMackenzie()
+        // }, 3000);
+        // setTimeout(() => {
+        //     showPopupOrgtx('popupOrgtx', 6000)
+        // }, 4000);
 
 
     const span = document.getElementById('aboutMe');
@@ -348,6 +348,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Justice",
+        "Rev Theory",
+        "assets/disc/justice.png",
+        "assets/songs/justice.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Overthrone",
         "Hacktivist",
         "assets/disc/overthrone.png",
@@ -642,24 +648,24 @@ function showPopup() {
 }
 
 
-function showPopupMackenzie() {
-    document.getElementById('popupMackenzie').style.display = 'block';
+// function showPopupMackenzie() {
+//     document.getElementById('popupMackenzie').style.display = 'block';
 
-    setTimeout(function() {
-        document.getElementById('popupMackenzie').style.display = 'none';
-    }, 10500);
+//     setTimeout(function() {
+//         document.getElementById('popupMackenzie').style.display = 'none';
+//     }, 10500);
 
-    setInterval(showPopupMackenzie, 60000);
-}
+//     setInterval(showPopupMackenzie, 60000);
+// }
 
 
 
-function showPopupOrgtx() {
-    document.getElementById('popupOrgtx').style.display = 'block';
+// function showPopupOrgtx() {
+//     document.getElementById('popupOrgtx').style.display = 'block';
 
-    setTimeout(function() {
-        document.getElementById('popupOrgtx').style.display = 'none';
-    }, 10900);
+//     setTimeout(function() {
+//         document.getElementById('popupOrgtx').style.display = 'none';
+//     }, 10900);
 
-    setInterval(showPopupOrgtx, 70000);
-}
+//     setInterval(showPopupOrgtx, 70000);
+// }
