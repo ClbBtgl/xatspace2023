@@ -348,6 +348,18 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Dead",
+        "Korn",
+        "assets/disc/issues.jpg",
+        "assets/songs/dead.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "Kool-Aid",
+        "Bring me the horizon",
+        "assets/disc/posthuman.png",
+        "assets/songs/koolaid.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Justice",
         "Rev Theory",
         "assets/disc/justice.png",
@@ -388,12 +400,6 @@ window.addEventListener("load", () => {
         "Ghost",
         "assets/disc/ghost.png",
         "assets/songs/crucified.mp3?raw=true"
-    );
-    Playlist.addSong(
-        "Kool-Aid",
-        "Bring me the horizon",
-        "assets/disc/koolaid.png",
-        "assets/songs/koolaid.mp3?raw=true"
     );
     Playlist.addSong(
         "Bad Habits",
@@ -446,7 +452,7 @@ window.addEventListener("load", () => {
     Playlist.addSong(
         "Trash",
         "Korn",
-        "assets/disc/issues.png",
+        "assets/disc/issues.jpg",
         "assets/songs/trash.mp3?raw=true"
     );
 
