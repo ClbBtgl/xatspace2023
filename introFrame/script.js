@@ -161,7 +161,7 @@
         for (index = j = 0, len = MESSAGES.length; j < len; index = ++j) {
             text = MESSAGES[index];
             if (text.text === 'WELCOME TO MY PROFILE') {
-                $message.append(`<p style=${'margin-left:3rem;'}>`);
+                $message.append(`<p style=${'margin-left:5rem;'}>`);
             } else {
                 $message.append("<p>");
             }
