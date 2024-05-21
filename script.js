@@ -339,16 +339,16 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
-        "DArkside",
-        "Bring me the horizon",
-        "assets/disc/darkside.png",
-        "assets/songs/darskide.mp3?raw=true"
-    );
-    Playlist.addSong(
         "Kool-Aid",
         "Bring me the horizon",
         "assets/disc/posthuman.png",
         "assets/songs/koolaid.mp3?raw=true"
+    );
+    Playlist.addSong(
+        "DArkside",
+        "Bring me the horizon",
+        "assets/disc/darkside.png",
+        "assets/songs/darskide.mp3?raw=true"
     );
     Playlist.addSong(
         "Justice",
