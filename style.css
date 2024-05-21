@@ -5,11 +5,6 @@
     --color-texto-oscuro: #fff;
 }
 
-@font-face {
-    font-family: 'p2';
-    src: url(assets/PressStart2P-Regular.ttf);
-}
-
 * {
     box-sizing: border-box;
     cursor: default !important;
@@ -1174,7 +1169,6 @@ CORE STYLES ABOVE - NO TOUCHY
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "p2" !important;
     width: 650px;
     margin: 0 auto;
 }
