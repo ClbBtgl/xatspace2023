@@ -40,26 +40,8 @@
 
         <script src="script.js"></script>
         <!-- hidden -->
-        <div class="container-fixed hidden" id="popup">
-            <div class="heading">orgtx_2019.exe</div>
-            <div class="inner">
-            </div>
-        </div>
-
-        <div class="container-fixed-mackenzie hidden" id="popupMackenzie">
-            <div class="heading">MackenzieFall___2018.exe</div>
-            <div class="inner">
-            </div>
-        </div>
-
-        <div class="container-fixed-org hidden" id="popupOrgtx">
-            <div class="heading">onlineRetroGaming_2017.exe</div>
-            <div class="inner">
-            </div>
-        </div>
-
-
-        <div class="content-black-space show" id="content-black-space">
+        <iframe src="introFrame/index.html" frameborder="0" id="iframeIntroActive"></iframe>
+        <div class="content-black-space hidden" id="content-black-space">
             <!-- efectos vhs -->
             <div class="lines"></div>
             <div class="main">
@@ -165,14 +147,6 @@
 
                         <!-- contenido principal  -->
                         <div class="column middle">
-                            <div class="options-switch">
-                                <label class="toggle-switchy" for="example_square_5" data-size="xs" data-style="square">
-                                <input checked type="checkbox" id="example_square_5">
-                                <span class="toggle">
-                                    <span class="switch"></span>
-                                </span>
-                            </label>
-                            </div>
                             <div class="heading">Skills</div>
                             <div class="inner">
                                 <div class="progress" style="width: 80%;"><span class="linked-animation">AUTISTIC </span>
@@ -246,7 +220,7 @@
                 </div>
             </div>
         </div>
-        <div class="8-bits-space hidden" id="8-bits-space">
+        <!-- <div class="8-bits-space hidden" id="8-bits-space">
             <div id="app">
                 <section class="container nes-container with-title">
                     <h2 class="nes-text is-disabled">DArkside</h2>
@@ -254,14 +228,14 @@
                         <a href="https://flic.kr/ps/3UxWPC" target="_blank">
                             <img class="ac-logo" src="assets/Flickr.png" width="50" height="auto" alt="">
                         </a>
-                        <!-- <img class="ac-logo" src="./assets/ac-8-bit.png" alt=""> -->
+
                     </section>
                     <section class="nes-container with-title pwd-length-setting-wrapper">
                         <div id="balloons" class="item">
                             <section class="message-list">
                                 <section class="message -left">
                                     <img class="logo" src="assets/jv.png" width="108"></img>
-                                    <!-- Balloon -->
+
                                     <div class="nes-balloon from-left">
                                         <p class="nes-text is-primary">
                                             Gay el que lee esto
@@ -271,29 +245,28 @@
                             </section>
                         </div>
                     </section>
-                    <!-- <section class="character-container nes-container with-title">
-                        <h2 class="title">Character Set</h2>
-                        <div class="char-length-wrapper">
-                            <label>Symbols:</label>
-                            <div class="range-slider_wrapper">
-                                <span class="slider-bar" :style="{ width: symbolsProgress + '%' }"></span>
-                                <input type="range" min="0" :max="config.maxSymbols" class="range-slider" v-model="config.minSymbols">
-                            </div>
-                            <span class="number-tip">{{ config.minSymbols }}</span>
+                    <h2 class="title">Character Set</h2>
+                    <div class="char-length-wrapper">
+                        <label>Symbols:</label>
+                        <div class="range-slider_wrapper">
+                            <span class="slider-bar" :style="{ width: symbolsProgress + '%' }"></span>
+                            <input type="range" min="0" :max="config.maxSymbols" class="range-slider" v-model="config.minSymbols">
                         </div>
-                        <div class="char-length-wrapper">
-                            <label>Numbers:</label>
-                            <div class="range-slider_wrapper">
-                                <span class="slider-bar" :style="{ width: numbersProgress + '%' }"></span>
-                                <input type="range" min="0" :max="config.maxNumbers" class="range-slider" v-model="config.minNumbers">
-                            </div>
-                            <span class="number-tip">{{ config.minNumbers }}</span>
+                        <span class="number-tip">{{ config.minSymbols }}</span>
+                    </div>
+                    <div class="char-length-wrapper">
+                        <label>Numbers:</label>
+                        <div class="range-slider_wrapper">
+                            <span class="slider-bar" :style="{ width: numbersProgress + '%' }"></span>
+                            <input type="range" min="0" :max="config.maxNumbers" class="range-slider" v-model="config.minNumbers">
                         </div>
-                    </section> -->
+                        <span class="number-tip">{{ config.minNumbers }}</span>
+                    </div>
                 </section>
-            </div>
+        </section>
         </div>
-        <i class="nes-icon coin is-large coin-master" id="coinMaster"></i>
+        </div> -->
+        <!-- <i class="nes-icon coin is-large coin-master" id="coinMaster"></i>  -->
     </body>
     <!-- credit:ShatteredDoll -->
 </body>

@@ -1399,3 +1399,11 @@ CORE STYLES ABOVE - NO TOUCHY
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+iframe {
+    position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    left: 0rem;
+    margin-top: -2rem;
+}

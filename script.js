@@ -11,7 +11,7 @@ let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
-let contain = "Kill me, kill me, that's what you've got to face.\nmy friend this ain't the end";
+let contain = "Kill me, that's what you've got to face.\nmy friend this ain't the end";
 let emoLetters = "EN ESTE SPACE APOYAMOS A LA QUESADILLA AMERICANA"
 let happyLetters = "D-Generation\nWho's keep the score?"
 let speed = 60;
@@ -37,15 +37,6 @@ request.send(null);
 
 
 window.addEventListener("load", () => {
-    showPopup()
-        // setTimeout(() => {
-        //     showPopupMackenzie()
-        // }, 3000);
-        // setTimeout(() => {
-        //     showPopupOrgtx('popupOrgtx', 6000)
-        // }, 4000);
-
-
     const span = document.getElementById('aboutMe');
     span.textContent = emoLetters;
     boton = document.getElementById("button-ad")
@@ -348,10 +339,10 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
-        "Dead",
-        "Korn",
-        "assets/disc/issues.jpg",
-        "assets/songs/dead.mp3?raw=true"
+        "DArkside",
+        "Bring me the horizon",
+        "assets/disc/darkside.png",
+        "assets/songs/darskide.mp3?raw=true"
     );
     Playlist.addSong(
         "Kool-Aid",
@@ -544,25 +535,25 @@ window.addEventListener("load", () => {
     }
 
     // Agregar un event listener para capturar el cambio en el checkbox
-    checkbox.addEventListener('change', cambioCheckbox);
-    document.getElementById('coinMaster').addEventListener('click', function() {
-        const eigthbits = document.getElementById("8-bits-space");
-        const normalSpace = document.getElementById("content-black-space");
-        if (!reproducido2) {
-            Player.playSong();
-        }
-        reproducido2 = true
-        state = !state
-        if (state) {
-            normalSpace.classList.remove("show");
-            normalSpace.classList.add("hidden");
-            eigthbits.classList.add("show");
-        } else {
-            eigthbits.classList.remove("show");
-            normalSpace.classList.add("show");
-            eigthbits.classList.add("hidden");
-        }
-    });
+    // checkbox.addEventListener('change', cambioCheckbox);
+    // document.getElementById('coinMaster').addEventListener('click', function() {
+    //     const eigthbits = document.getElementById("8-bits-space");
+    //     const normalSpace = document.getElementById("content-black-space");
+    //     if (!reproducido2) {
+    //         Player.playSong();
+    //     }
+    //     reproducido2 = true
+    //     state = !state
+    //     if (state) {
+    //         normalSpace.classList.remove("show");
+    //         normalSpace.classList.add("hidden");
+    //         eigthbits.classList.add("show");
+    //     } else {
+    //         eigthbits.classList.remove("show");
+    //         normalSpace.classList.add("show");
+    //         eigthbits.classList.add("hidden");
+    //     }
+    // });
 });
 
 function toggleDarkMode() {
@@ -588,11 +579,27 @@ function typeWriter() {
     }
 }
 
-
-// FUNCIONES DE AUTOESCRITURA, NO HICE FUNCIONES REUTILIZABLES POR QUE SOY FLOJA
-// function typeWriterSeparator() {
-//     document.getElementById("contain").innerHTML += separator;
-//     if (separatorCount === separator.length) {
+window.addEventListener('message', (event) => {
+        if (event.data == 'activeLoadFrame') {
+            const normalSpace = document.getElementById("content-black-space");
+            const frameIntro = document.getElementById("iframeIntroActive");
+            if (!reproducido2) {
+                Player.playSong();
+            }
+            reproducido2 = true
+            state = !state
+            normalSpace.classList.remove("hidden");
+            normalSpace.classList.add("show");
+            frameIntro.classList.add("hidden");
+            const reproPlay = document.getElementById("reproPlay");
+            reproPlay.classList.remove("play")
+            reproPlay.classList.add("pause")
+        }
+    })
+    // FUNCIONES DE AUTOESCRITURA, NO HICE FUNCIONES REUTILIZABLES POR QUE SOY FLOJA
+    // function typeWriterSeparator() {
+    //     document.getElementById("contain").innerHTML += separator;
+    //     if (separatorCount === separator.length) {
 
 //     }
 // }
@@ -641,37 +648,3 @@ function typeWriterAliasText() {
 
     }
 }
-
-
-function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-
-    setTimeout(function() {
-        document.getElementById('popup').style.display = 'none';
-    }, 10000);
-
-    setInterval(showPopup, 50000);
-}
-
-
-// function showPopupMackenzie() {
-//     document.getElementById('popupMackenzie').style.display = 'block';
-
-//     setTimeout(function() {
-//         document.getElementById('popupMackenzie').style.display = 'none';
-//     }, 10500);
-
-//     setInterval(showPopupMackenzie, 60000);
-// }
-
-
-
-// function showPopupOrgtx() {
-//     document.getElementById('popupOrgtx').style.display = 'block';
-
-//     setTimeout(function() {
-//         document.getElementById('popupOrgtx').style.display = 'none';
-//     }, 10900);
-
-//     setInterval(showPopupOrgtx, 70000);
-// }
