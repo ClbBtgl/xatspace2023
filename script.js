@@ -339,6 +339,12 @@ window.addEventListener("load", () => {
 
     // PUSHEAN CANCIONES
     Playlist.addSong(
+        "Top 10 staTues tHat CriEd bloOd",
+        "Bring me the horizon",
+        "assets/disc/tp.png",
+        "assets/songs/criedblood.mp3?raw=true"
+    );
+    Playlist.addSong(
         "Fallout",
         "Masked Wolf",
         "assets/disc/fallout.jpg",
@@ -367,12 +373,6 @@ window.addEventListener("load", () => {
         "Hacktivist",
         "assets/disc/overthrone.png",
         "assets/songs/overthrone.mp3?raw=true"
-    );
-    Playlist.addSong(
-        "DArkside",
-        "Bring me the horizon",
-        "assets/disc/darkside.png",
-        "assets/songs/darskide.mp3?raw=true"
     );
     Playlist.addSong(
         "Run",
