@@ -12,7 +12,7 @@ let signatureText = ''
 let isOverTitle = null
 let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
 let contain = "Kill me, that's what you've got to face.\nmy friend this ain't the end";
-let emoLetters = "EN ESTE SPACE APOYAMOS A LA QUESADILLA AMERICANA"
+let emoLetters = "My heart's a hieroglyph, it talks in tongues.\nTen thousand voices fill my broken lungs"
 let happyLetters = "D-Generation\nWho's keep the score?"
 let speed = 60;
 let currentIndex
@@ -338,6 +338,12 @@ window.addEventListener("load", () => {
     })(window, document, jQuery, {});
 
     // PUSHEAN CANCIONES
+    Playlist.addSong(
+        "Fallout",
+        "Masked Wolf",
+        "assets/disc/fallout.jpg",
+        "assets/songs/fallout.mp3?raw=true"
+    );
     Playlist.addSong(
         "Kool-Aid",
         "Bring me the horizon",

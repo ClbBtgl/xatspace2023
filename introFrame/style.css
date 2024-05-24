@@ -60,3 +60,55 @@ a {
 .cursor-pointer {
     cursor: pointer !important;
 }
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        color: black;
+    }
+}
+
+.linked-animation {
+    color: #eee9e9;
+    animation: rgbText 3s steps(9) 0s infinite alternate;
+    animation-name: rgbText;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rgbText {
+    0% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), 0px 0 1px rgba(220, 150, 220, 0.7), 0 0px 3px rgba(150, 200, 220, 0.7), 0px 0 3px rgba(150, 220, 180, 0.7), 0 0px 3px rgba(220, 150, 150, 0.7), 0px 0 3px rgba(150, 150, 220, 0.7);
+    }
+    25% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), 0px 0 1px rgba(220, 150, 220, 0.7), 0 0px 3px rgba(150, 200, 220, 0.7), 0px 0 3px rgba(150, 220, 180, 0.7), 0 0px 3px rgba(220, 150, 150, 0.7), 0px 0 3px rgba(150, 150, 220, 0.7);
+    }
+    45% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), 5px 0 1px rgba(220, 150, 220, 0.7), 0 5px 1px rgba(150, 200, 220, 0.7), -5px 0 1px rgba(150, 220, 180, 0.7), 0 -5px 1px rgba(220, 150, 150, 0.7), 5px 0 1px rgba(150, 150, 220, 0.7);
+    }
+    50% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), -5px 0 1px rgba(220, 150, 220, 0.7), 0 -5px 1px rgba(150, 200, 220, 0.7), 5px 0 1px rgba(150, 220, 180, 0.7), 0 5px 1px rgba(220, 150, 150, 0.7), -5px 0 1px rgba(150, 150, 220, 0.7);
+    }
+    55% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), 0px 0 3px rgba(220, 150, 220, 0.7), 0 0px 3px rgba(150, 200, 220, 0.7), 0px 0 3px rgba(150, 220, 180, 0.7), 0 0px 3px rgba(220, 150, 150, 0.7), 0px 0 3px rgba(150, 150, 220, 0.7);
+    }
+    90% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), -5px 0 1px rgba(220, 150, 220, 0.7), 0 5px 1px rgba(150, 200, 220, 0.7), 5px 0 1px rgba(150, 220, 180, 0.7), 0 -5px 1px rgba(220, 150, 150, 0.7), 5px 0 1px rgba(150, 150, 220, 0.7);
+    }
+    100% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.5), 1px -1px 8px rgba(240, 240, 240, 0.5), 5px 0 1px rgba(220, 150, 220, 0.7), 0 -5px 1px rgba(150, 200, 220, 0.7), -5px 0 1px rgba(150, 220, 180, 0.7), 0 5px 1px rgba(220, 150, 150, 0.7), -5px 0 1px rgba(150, 150, 220, 0.7);
+    }
+}

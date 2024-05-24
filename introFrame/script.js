@@ -1,6 +1,7 @@
 (function() {
     var $animate, $container, $message, $paragraph, MESSAGES, animate, initialise, scramble;
-
+    let count = 0
+    let continueShow = document.getElementById("animate");
     MESSAGES = [];
 
     MESSAGES.push({
@@ -15,17 +16,17 @@
 
     MESSAGES.push({
         delay: 2200,
-        text: "=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-"
+        text: "=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=--=-=-=--=-=--=-=-=-"
     });
 
     MESSAGES.push({
         delay: 3600,
-        text: "WELCOME TO MY PROFILE"
+        text: "That this was gonna end in tears... Or some sh*t like that"
     });
 
     MESSAGES.push({
         delay: 5200,
-        text: "=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=-"
+        text: "=-=-=--=-=-=--=-=-=--=-=-=--=-=-=--=-=--=-=-=--=-=--=-=-=-"
     });
 
     $container = $("#container");
@@ -129,7 +130,13 @@
                 return $element.html(output.join(''));
             },
             complete: function() {
+                count++
+                if (count === 5) {
+                    continueShow.classList.remove("hidden");
+                    continueShow.classList.add("show");
+                }
                 return $element.html(text);
+
             }
         };
         // Animate the text.
@@ -160,11 +167,7 @@
         $animate.click(setPostMessage);
         for (index = j = 0, len = MESSAGES.length; j < len; index = ++j) {
             text = MESSAGES[index];
-            if (text.text === 'WELCOME TO MY PROFILE') {
-                $message.append(`<p style=${'margin-left:5rem;'}>`);
-            } else {
-                $message.append("<p>");
-            }
+            $message.append(`<p class="linked-animation">`);
 
         }
         $paragraph = $container.find("p");
