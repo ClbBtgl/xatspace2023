@@ -597,9 +597,9 @@ window.addEventListener('message', (event) => {
             normalSpace.classList.remove("hidden");
             normalSpace.classList.add("show");
             frameIntro.classList.add("hidden");
-            const reproPlay = document.getElementById("reproPlay");
-            reproPlay.classList.remove("play")
-            reproPlay.classList.add("pause")
+            // const reproPlay = document.getElementById("reproPlay");
+            // reproPlay.classList.remove("play")
+            // reproPlay.classList.add("pause")
         }
     })
     // FUNCIONES DE AUTOESCRITURA, NO HICE FUNCIONES REUTILIZABLES POR QUE SOY FLOJA
