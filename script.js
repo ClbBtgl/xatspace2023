@@ -10,7 +10,7 @@ let aliasText = ''
 let dataFriends = null
 let signatureText = ''
 let isOverTitle = null
-let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2023\nAUTHOR:LALA\n***********************************************************************';
+let title = 'CV.CORP(R) CV-DOS(TM)\nXATSPACE V20.23\n(C)CV-CRYSTAL CORP 2000-2024\nAUTHOR:LALA\n***********************************************************************';
 let contain = "Kill me, that's what you've got to face.\nmy friend this ain't the end";
 let emoLetters = "My heart's a hieroglyph, it talks in tongues.\nTen thousand voices fill my broken lungs"
 let happyLetters = "D-Generation\nWho's keep the score?"
@@ -338,6 +338,12 @@ window.addEventListener("load", () => {
     })(window, document, jQuery, {});
 
     // PUSHEAN CANCIONES
+    Playlist.addSong(
+        "On my teeth",
+        "Underoath",
+        "assets/disc/underoath.png",
+        "assets/songs/onmyteet.mp3?raw=true"
+    );
     Playlist.addSong(
         "Top 10 staTues tHat CriEd bloOd",
         "Bring me the horizon",
